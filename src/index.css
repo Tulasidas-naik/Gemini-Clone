@@ -21,3 +21,36 @@
     opacity: 1;
   }
 }
+
+#light{
+  background-color: white;
+}
+
+#dark{
+  background-color: black;
+} 
+
+#light.sidebar{
+   background-color: #e1eaf3ef;
+}
+
+#dark.sidebar{
+  background-color: rgba(57, 36, 129, 0.822);
+}
+
+#dark label{
+  color: white;
+}
+
+#light label{
+  color: black;
+}
+
+#dark .resultData{
+  color: white;
+}
+
+#dark .title{
+  color: white;
+}
+

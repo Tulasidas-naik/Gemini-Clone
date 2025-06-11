@@ -3,6 +3,7 @@ import './MainComponent.css'
 import { assets } from '../../assets/assets'
 import { Context } from '../../Context'
 import main from '../../Gemini'
+import Switch from 'react-switch'
 
 const MainComponent = () => {
   const {
@@ -14,13 +15,21 @@ const MainComponent = () => {
         prevPrompt,
         showResult,
         onSent,
+        theme,
+        changeTheme,
   } = useContext(Context)
 
   return (
-    <div className='main'>
+    <div className='main' id={theme}>
       <div className="nav">
         <p><span>Gemini</span></p>
-        <img src={assets.user_icon} alt="" />
+        <div className='user-switch'>
+          <div id='switch'>
+            <label>{theme} Mode</label>
+            <Switch onChange={() => changeTheme()} checked={theme === 'dark'} />
+          </div>
+          <img src={assets.user_icon} alt="" />
+        </div>
       </div>
 
       <div className='main-content'>

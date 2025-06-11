@@ -11,6 +11,11 @@ export const ContextProvider = (props) => {
     const [ prevPrompt, setPrevPrompt ] = useState([])
     const [ showResult, setShowResult ] = useState(false)
     const [ loading, setLoading ] = useState(false)
+    const [ theme,  setTheme ] = useState('light')
+
+    const changeTheme = () => {
+        setTheme(curr => (curr ==='light' ? 'dark' : 'light' ))
+    }
 
     const delayRes = (index, nextWord) => {
         setTimeout(() => {
@@ -67,6 +72,8 @@ export const ContextProvider = (props) => {
         showResult,
         onSent,
         newChat,
+        theme,
+        changeTheme,
     }
 
     return (

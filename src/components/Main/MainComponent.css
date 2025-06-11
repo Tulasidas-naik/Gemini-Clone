@@ -13,6 +13,22 @@
     align-items: center;
 }
 
+.nav .user-switch{
+    margin: 15px 20px;
+    padding: 5px;
+    gap: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav #switch{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+}
+
 .nav span{
     font-size: 20px;
     font-weight: 500;
